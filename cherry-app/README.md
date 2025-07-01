@@ -1,12 +1,43 @@
-# React + Vite
+# Cherry Video Chat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project scaffolds a progressive web application for a real-time video chat built with React, Vite and Firebase.
+It provides the basic setup with localization, theme toggling and placeholders for WebRTC video calls and mini‑games.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Firebase authentication and Firestore (configuration via environment variables).
+- WebRTC video chat component (signaling not implemented).
+- Internationalization with **react-i18next** (English and Spanish samples).
+- Light/Dark theme switcher using Tailwind CSS.
+- PWA ready with `vite-plugin-pwa`.
+- Stubs for mini‑games (Rock‑Paper‑Scissors, Quiz, Drawing game).
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Copy `.env.example` to `.env` and fill in your Firebase project settings.
+
+3. Start the development server
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173` by default.
+
+## Building
+
+```bash
+npm run build
+```
+
+The optimized app will be generated in the `dist` folder and can be served using `npm run preview`.
+
+## Post‑MVP
+
+This scaffold leaves hooks for advanced features like dedicated signaling servers, AI moderation and premium matchmaking.
